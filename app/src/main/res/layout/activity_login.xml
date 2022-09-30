@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:background="@drawable/gradient_animation"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/animasiLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvPleaseLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MA. AL-WATHONIYAH 5"
+            android:fontFamily="@font/baloo"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:src="@drawable/call_center"
+            android:id="@+id/gambar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/tvPleaseLogin"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gambar"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/baloo"
+                    android:text="Login"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:background="@drawable/keliling_text"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableStart="@drawable/ic_baseline_person_24"
+                    android:drawablePadding="24dp"
+                    android:hint="Username"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:background="@drawable/keliling_text"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:drawableStart="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="24dp"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/form"
+            android:background="@drawable/keliling_btn"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:text="Login" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_below="@id/form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tvCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnAbsen"
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/baloo"
+            android:text="Create New Account"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
